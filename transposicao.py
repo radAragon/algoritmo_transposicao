@@ -66,7 +66,7 @@ def decifra(cifrado, chave):
 
     result = ''
     for y in range(n):
-        result += ''.join([matriz_cifrada[x - 1][y:y+1] for x in chave])
+        result += ''.join([matriz_cifrada[chave.index(x)][y:y+1] for x in range(1, len(chave) + 1)])
 
     return result
 
